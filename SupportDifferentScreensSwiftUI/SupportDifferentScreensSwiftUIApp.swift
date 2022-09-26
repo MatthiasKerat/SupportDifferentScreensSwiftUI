@@ -11,7 +11,10 @@ import SwiftUI
 struct SupportDifferentScreensSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ResponsiveView {properties in
+                ContentView(layoutProperties: properties)
+            }
+            .navigationViewStyle(.stack)
         }
     }
 }
